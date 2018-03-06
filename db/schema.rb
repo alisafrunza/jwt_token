@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(version: 20180302123914) do
+ActiveRecord::Schema.define(version: 20180306083557) do
 
   create_table "address_books", force: :cascade do |t|
     t.string "address"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20180302123914) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "public_key"
     t.string "secret"
+    t.string "token"
     t.index ["email"], name: "index_consumers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_consumers_on_reset_password_token", unique: true
   end
